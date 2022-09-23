@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/astrosat/react-utils/compare/v1.1.0...v1.1.1) (2022-09-23)
+
+
+### Bug Fixes
+
+* **devops:** Fix publish GitHub workflow ([94d6ba2](https://github.com/astrosat/react-utils/commit/94d6ba2094344fe59487c2f3c82446ef3208f0a4))
+
 # [1.1.0](https://github.com/astrosat/react-utils/compare/v1.0.0...v1.1.0) (2022-09-21)
 
 
