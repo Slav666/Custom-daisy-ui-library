@@ -1,7 +1,10 @@
 import React from 'react';
 import '../src/index.css';
-import StoryLayout from './story-layout';
+import { Theme } from 'react-daisyui';
+import { withThemesProvider } from 'themeprovider-storybook';
+// import StoryLayout from './story-layout';
 import { DEFAULT_THEME, STORAGE_KEY, THEME_PICKER_LIST } from './theming';
+import { useGlobalTheme } from './theming';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -55,20 +58,11 @@ export const globalTypes = {
     },
   },
 };
-
-// export const decorators = [
-//   (Story, options) => (
-//     <StoryLayout
-//       title={options.title}
-//       description={options.story}
-//       source={options.parameters.storySource.source
-//         /* TODO: clean up all this string formatting/regex */
-//         /* Removes the args arrow function */
-//         .replace(/\(.*args.*\)\s*=>\s*\{\s*\n/, '')
-//         /* Removes the last occurence of a closing bracket (from the lambda) */
-//         .replace(/}([^}]*)$/, '$1')}
-//     >
-//       <Story />
-//     </StoryLayout>
-//   ),
-// ];
+export const decorators = [
+  (Story: any, context: any) => (
+    <Theme dataTheme={useGlobalTheme()}>
+      {/* <CssBaseline /> */}
+      <Story {...context} />
+    </Theme>
+  ),
+];

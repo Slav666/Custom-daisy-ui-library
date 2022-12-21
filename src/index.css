@@ -53,6 +53,10 @@ body {
   background-color: var(--color-bg-secondary);
   color: var(--color-text-accent);
 }
+[data-theme='light'] .btn {
+  border-width: 10px;
+  border-color: black;
+}
 
 .footer {
   display: flex;

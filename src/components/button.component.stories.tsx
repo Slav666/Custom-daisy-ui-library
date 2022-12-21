@@ -2,10 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-// import { decorators } from '../../.storybook/preview';
-// import ThemePicker from '../../.storybook/theming/consts';
-import { ThemeProvider } from '@storybook/theming';
-
+import { decorators } from '../../.storybook/preview';
 import Button, { ButtonProps } from './button.component';
 
 export default {
@@ -19,13 +16,7 @@ export default {
       control: false,
     },
   },
-  // decorators: [
-  //   Story => (
-  //     <ThemeProvider theme="default">
-  //       <Story />
-  //     </ThemeProvider>
-  //   ),
-  // ],
+  decorators: decorators,
 } as Meta;
 
 const Template: Story<ButtonProps> = args => {
@@ -41,9 +32,13 @@ export const Colors: Story<ButtonProps> = args => {
     <div>
       <div>
         <Button {...args}>Default</Button>
+
+        <Button {...args}>Default</Button>
+
         <Button {...args} color="primary">
           Primary
         </Button>
+
         <Button {...args} color="secondary">
           Secondary
         </Button>
@@ -54,6 +49,7 @@ export const Colors: Story<ButtonProps> = args => {
           Ghost
         </Button>
       </div>
+
       <div>
         <Button {...args} color="success">
           Success
