@@ -3,7 +3,7 @@ export const STORAGE_KEY = 'sb-react-daisyui-preview-theme';
 
 export const THEME_PICKER_LIST = [
   { name: 'light', class: 'light', color: '#570df8' },
-  { name: 'dark', class: 'dark', color: '#793ef9' },
+  { name: 'dark', class: 'dark', backgroundColor: '#793ef9' },
   { name: 'cupcake', class: 'cupcake', color: '#65c3c8' },
   { name: 'bumblebee', class: 'bumblebee', color: '#e0a82e' },
   { name: 'emerald', class: 'emerald', color: '#66cc8a' },

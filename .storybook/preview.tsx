@@ -5,6 +5,7 @@ import { withThemesProvider } from 'themeprovider-storybook';
 // import StoryLayout from './story-layout';
 import { DEFAULT_THEME, STORAGE_KEY, THEME_PICKER_LIST } from './theming';
 import { useGlobalTheme } from './theming';
+import { ThemeProvider } from '@storybook/theming';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -66,3 +67,4 @@ export const decorators = [
     </Theme>
   ),
 ];
+console.log('decorators:', decorators);
